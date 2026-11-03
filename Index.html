@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lente Publicitária</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8ff;--surf:#fff;--soft:#f0eafb;--ink:#1d1530;--mute:#6b6280;--line:#e2d9f3;--p:#5b21b6;--p2:#7c3aed;--lil:#c4b5fd;--deep:#2e1065;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150f24;--surf:#1d1530;--soft:#261b3f;--ink:#f1ecfb;--mute:#a79dc0;--line:#3a2d5c;--p:#c4b5fd;--p2:#a78bfa;--lil:#7c3aed;--deep:#0f0a1c}}
+:root[data-theme="dark"]{--bg:#150f24;--surf:#1d1530;--soft:#261b3f;--ink:#f1ecfb;--mute:#a79dc0;--line:#3a2d5c;--p:#c4b5fd;--p2:#a78bfa;--lil:#7c3aed;--deep:#0f0a1c}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em;margin:0}
+a{color:inherit;text-decoration:none}button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--p2);outline-offset:2px}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+body:before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.bar{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Fraunces,serif;font-size:22px;font-weight:600;cursor:pointer}
+nav{margin-left:auto;display:flex;gap:6px;align-items:center}
+nav a{padding:6px 12px;border-radius:99px;color:var(--mute);font-size:14px;font-weight:500}
+nav a:hover,nav a.on{background:var(--soft);color:var(--p)}
+.sb{display:flex;align-items:center;background:var(--soft);border-radius:99px;padding:0 14px;width:200px}
+.sb input{background:none;border:0;outline:0;width:100%;height:36px;font-size:14px}
+.lens{position:relative;height:100%;min-height:200px}
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;padding:44px 0 36px}
+.hero .cv{border-radius:20px;overflow:hidden;aspect-ratio:4/3;cursor:pointer}
+.hero h1{font-size:clamp(32px,4.4vw,52px);margin:12px 0}
+.hero p{color:var(--mute);font-size:18px;max-width:48ch}
+.tag{display:inline-block;font-size:13px;font-weight:600;padding:3px 12px;border-radius:99px;background:var(--soft);color:var(--p)}
+.meta{color:var(--mute);font-size:13px}
+.btn{display:inline-block;background:var(--p);color:#fff;border:0;border-radius:99px;padding:10px 22px;font-weight:600;cursor:pointer}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn,:root:not([data-theme="light"]) .chip.on{color:var(--deep)}}
+:root[data-theme="dark"] .btn{color:var(--deep)}
+.btn.o{background:none;color:var(--p);border:1px solid var(--line)}
+section{padding:36px 0}
+.sh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px}
+.sh h2{font-size:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{cursor:pointer}.card .cv{border-radius:14px;overflow:hidden;aspect-ratio:16/10;margin-bottom:12px}
+.card h3{font-size:20px;margin:8px 0 6px}.card p{color:var(--mute);font-size:15px;margin:0 0 6px}
+.card:hover h3{color:var(--p)}
+.cv svg{width:100%;height:100%;display:block}
+.dest{background:var(--deep);color:#f1ecfb;border-radius:24px;padding:36px}
+.dest .grid{gap:32px}.dest h3{font-size:22px;margin:10px 0}.dest p{color:#c9bfe3;font-size:15px}.dest .tag{background:#3b2a66;color:#e5dcff}
+.dest .card:hover h3{color:var(--lil)}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.cat{border:1px solid var(--line);background:var(--surf);border-radius:14px;padding:18px;cursor:pointer;border-left:6px solid var(--c)}
+.cat b{font-family:Fraunces,serif;font-size:18px;display:block}.cat span{color:var(--mute);font-size:14px}
+.cat:hover{background:var(--soft)}
+.rec{display:grid;grid-template-columns:1fr 1fr;gap:12px 40px}
+.rec div{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.rec .serif{font-size:32px;color:var(--lil);min-width:36px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:var(--soft);border-radius:24px;padding:40px}
+.about h2{font-size:30px;margin-bottom:12px}.about p{color:var(--mute);margin:0 0 12px}
+.nl{text-align:center;padding:48px 20px}.nl h2{font-size:28px;margin-bottom:8px}
+.nl .f{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.nl input{border:1px solid var(--line);background:var(--surf);border-radius:99px;padding:10px 18px;min-width:260px}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-size:14px}
+footer .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer a{margin-right:16px}footer a:hover{color:var(--p)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 28px}
+.chip{border:1px solid var(--line);background:var(--surf);border-radius:99px;padding:6px 14px;font-size:14px;cursor:pointer}
+.chip.on{background:var(--p);color:#fff;border-color:var(--p)}
+:root[data-theme="dark"] .chip.on{color:var(--deep)}
+.empty{color:var(--mute);padding:40px 0}
+.art{max-width:720px;margin:0 auto;padding:36px 20px 20px}
+.art h1{font-size:clamp(32px,5vw,46px);margin:14px 0}
+.art .sub{font-size:20px;color:var(--mute);font-family:Fraunces,serif;line-height:1.4}
+.art .cv{border-radius:18px;overflow:hidden;aspect-ratio:16/9;margin:26px 0}
+.art h2{font-size:26px;margin:34px 0 10px}
+.art p{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:19px;line-height:1.75;margin:0 0 18px}
+.art blockquote{margin:28px 0;padding:6px 0 6px 22px;border-left:4px solid var(--p2);font-family:Fraunces,serif;font-size:22px;line-height:1.4}
+.refs{border-top:1px solid var(--line);margin-top:30px;padding-top:18px;color:var(--mute);font-size:14px}
+.refs li{margin-bottom:6px}
+.share{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:24px}
+.pn{display:flex;justify-content:space-between;gap:20px;margin:30px 0;font-size:14px}
+.pn a{cursor:pointer;color:var(--p);font-weight:600;max-width:46%}
+@media(max-width:860px){.hero,.about,.rec{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.sb{width:140px}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.bar{gap:10px}.sb{width:110px}.dest,.about{padding:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.opt{display:block;width:100%;text-align:left;background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px;cursor:pointer}
+.opt:hover{background:var(--soft);border-color:var(--p2)}
+.pg{height:6px;background:var(--soft);border-radius:9px;overflow:hidden;margin:14px 0 26px}.pg i{display:block;height:100%;background:var(--p2)}
+.pgw{max-width:680px;margin:0 auto;padding:40px 20px 56px}
+.gl h2{font-size:34px;color:var(--p2);margin:34px 0 0;border-bottom:1px solid var(--line)}
+.gl .t{display:block;font-family:Fraunces,serif;font-size:20px;font-weight:600;margin-top:18px}.gl p{margin:4px 0 0;color:var(--mute)}
+.gi{width:100%;padding:12px 18px;border:1px solid var(--line);border-radius:99px;background:var(--surf);margin:18px 0 6px}
+.tl{border-left:3px solid var(--lil);margin:28px 0 0 8px}
+.tl>div{position:relative;padding:0 0 30px 26px}
+.tl>div:before{content:"";position:absolute;left:-11px;top:6px;width:19px;height:19px;border-radius:50%;background:var(--p2);border:4px solid var(--bg)}
+.tl .y{font-family:Fraunces,serif;font-size:26px;font-weight:600;color:var(--p)}
+.tl h3{font-size:19px;margin:2px 0 4px}.tl p{margin:0 0 6px;color:var(--mute)}.tl a{color:var(--p);font-weight:600;font-size:14px}
+.rm{margin-top:8px}
+@media(max-width:980px){.bar{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px}nav{margin-left:0;width:100%;overflow-x:auto;white-space:nowrap}nav a,.sb{flex:none}}
+:root .btn.o{background:none;color:var(--p)}
+.sv{margin:0 0 4px}
+</style>
+</head>
+<body>
+<header><div class="w bar">
+<a class="logo" href="#home" aria-label="Lente Publicitária, início"><svg width="30" height="30" viewBox="0 0 30 30"><circle cx="13" cy="13" r="9" fill="none" stroke="var(--p)" stroke-width="3"/><circle cx="13" cy="13" r="3.5" fill="var(--p2)"/><path d="M20 20l7 7" stroke="var(--p)" stroke-width="3" stroke-linecap="round"/></svg>Lente Publicitária</a>
+<nav><a class="h" href="#home" id="n-home">Início</a><a class="h" href="#artigos" id="n-artigos">Artigos</a><a class="h" href="#sobre" id="n-sobre">Sobre</a><a class="h" href="#quiz" id="n-quiz">Quiz</a><a class="h" href="#glossario" id="n-glossario">Glossário</a><a class="h" href="#linha" id="n-linha">Linha do tempo</a><a class="h" href="#lista" id="n-lista">Minha lista</a>
+<div class="sb"><input id="q" type="search" placeholder="Buscar artigos" aria-label="Buscar artigos"></div></nav>
+</div></header>
+<main id="app"></main>
+<footer><div class="w"><div><b class="serif">Lente Publicitária</b><br>Olhar para a publicidade além do óbvio.</div>
+<div><a href="#home">Início</a><a href="#artigos">Artigos</a><a href="#sobre">Sobre</a><a href="#quiz">Quiz</a><a href="#glossario">Glossário</a><a href="#linha">Linha do tempo</a><a href="#lista">Minha lista</a><a href="#news">Newsletter</a></div>
+<div>© 2026 Lente Publicitária. Projeto editorial independente.</div></div></footer>
+<script>
+const CATS={pp:['Publicidade e Propaganda','#5b21b6','Conceitos, estratégias, criação e posicionamento de marca.'],ac:['Análise de Campanhas','#7c3aed','O que está por trás de campanhas nacionais e internacionais.'],cm:['Comunicação e Marketing','#9333ea','Branding, redes sociais e comportamento do consumidor.'],cd:['Criatividade e Design','#a855f7','Direção de arte, identidade visual e processos criativos.'],ps:['Publicidade e Sociedade','#6d28d9','Representatividade, ética, inclusão e influência cultural.'],ti:['Tendências e Inovação','#4c1d95','IA, novas tecnologias e o futuro da comunicação.'],cf:['Carreira e Formação','#8b5cf6','Profissões, portfólio e mercado de trabalho.']};
+const A=[
+{id:'alem-do-slogan',c:'pp',t:'Publicidade não é só vender: é dar sentido ao que se compra',s:'Marcas disputam atenção, mas o que realmente ficam disputando é significado.',d:'2026-10-28',m:6,a:'Redação Lente',b:[['Do produto à ideia','Durante décadas, anunciar era descrever o produto e listar vantagens. Hoje, quando quase tudo tem concorrente equivalente, a diferença costuma estar na ideia que a marca consegue associar a si mesma: pertencimento, praticidade, rebeldia, cuidado.','Por isso posicionamento é uma decisão estratégica, não um enfeite de comunicação. Ele define o que a marca promete, para quem e, principalmente, o que decide não ser.'],['A criatividade a serviço de um problema','Boa criação começa num problema bem formulado. O briefing que pergunta “como fazer algo bonito?” costuma render peças esquecíveis; o que pergunta “por que esse público ignora a categoria?” abre caminhos mais interessantes.'],['O que fica depois do anúncio','Uma campanha acaba, a percepção permanece. É nessa memória acumulada que a publicidade faz sua parte cultural: ela ensina o que é desejável, o que é normal e o que merece ser lembrado.']],r:['OGILVY, David. Confissões de um publicitário.','RIES, Al; TROUT, Jack. Posicionamento: a batalha por sua mente.']},
+{id:'real-beleza-dove',c:'ac',t:'Dove e a Real Beleza: quando o discurso entra em teste',s:'Uma das plataformas mais longevas do mercado e as perguntas que ela levanta.',d:'2026-10-24',m:7,a:'Redação Lente',b:[['O movimento','Lançada em meados dos anos 2000, a plataforma Real Beleza da Dove deslocou o foco da publicidade de beleza: em vez de modelos idealizadas, mulheres reais e um discurso de autoestima. A proposta foi pioneira e ajudou a consolidar o chamado propósito de marca.'],['O que a análise pede','Analisar uma campanha é separar três camadas: o que ela diz, a quem fala e o que a empresa faz fora do anúncio. Críticas à plataforma apontam que a mesma indústria segue vendendo padrões estéticos em outras marcas do portfólio.'],['Lição para quem cria','Propósito não é texto de campanha, é compromisso verificável. Quanto mais alto o discurso, mais atento o público está à coerência entre fala e prática.']],r:['Material institucional da Dove sobre a Campanha pela Real Beleza.','KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. Marketing 4.0.']},
+{id:'marca-nas-redes',c:'cm',t:'Marca nas redes: por que presença não é o mesmo que relacionamento',s:'Postar todo dia não constrói vínculo. Responder, ouvir e ter voz própria, sim.',d:'2026-10-20',m:5,a:'Redação Lente',b:[['O feed como vitrine','Muitas marcas tratam redes sociais como mural de avisos. O algoritmo recompensa conteúdo que gera conversa, e conversa exige que alguém, do outro lado, tenha o que dizer.'],['Voz de marca','Uma voz consistente é resultado de escolhas editoriais: vocabulário, humor, limites e temas que a marca assume ou evita. Sem isso, a comunicação vira um coro de perfis intercambiáveis.'],['Medir o que importa','Curtidas ajudam pouco a explicar compra, recomendação ou lealdade. Vale cruzar métricas de alcance com sinais de relacionamento, como salvamentos, respostas e retorno de quem já consome.']],r:['KOTLER, Philip; KARTAJAYA, Hermawan; SETIAWAN, Iwan. Marketing 4.0.']},
+{id:'direcao-de-arte',c:'cd',t:'Direção de arte: o que o olhar decide antes de a gente ler',s:'Cor, tipografia e composição contam a história antes do texto.',d:'2026-10-15',m:6,a:'Redação Lente',b:[['Hierarquia é argumento','Quem olha uma peça decide em segundos o que importa. A direção de arte organiza essa leitura: tamanho, contraste e silêncio visual dizem o que vem primeiro.'],['Identidade visual como sistema','Logotipo é só uma peça. Uma identidade consistente depende de paleta, tipografia, grid, tom de imagem e regras de uso que permitam a muitas pessoas produzirem sem perder a unidade.'],['Referência sem cópia','Repertório é matéria-prima, mas copiar estética sem entender a função dela produz peças bonitas e vazias. Perguntar “por que isso funciona ali?” é o exercício mais útil.']],r:['LUPTON, Ellen. Pensar com tipos.','WHEELER, Alina. Design de identidade da marca.']},
+{id:'representatividade',c:'ps',t:'Quem aparece (e quem não aparece) nos anúncios',s:'Representatividade vai além de escalar um rosto diverso para a campanha.',d:'2026-10-10',m:7,a:'Redação Lente',b:[['Ver-se na tela','A publicidade circula em massa e ajuda a moldar imaginários. Quando certos grupos só aparecem em papéis estereotipados, ou não aparecem, o anúncio reforça o que já é desigual.'],['Do rosto à estrutura','Representar bem exige diversidade nas equipes que pensam, criam e aprovam. Sem isso, o risco é de uma inclusão de fachada, que o público identifica rápido.'],['Autorregulação','No Brasil, o Conar atua na análise de queixas sobre anúncios, com base no Código Brasileiro de Autorregulamentação Publicitária. Conhecê-lo é parte do ofício de quem cria.']],r:['CONAR. Código Brasileiro de Autorregulamentação Publicitária.']},
+{id:'ia-na-criacao',c:'ti',t:'Inteligência artificial na criação: ferramenta, parceira ou atalho?',s:'A IA acelera etapas. O que ela não faz é decidir o que vale a pena dizer.',d:'2026-10-06',m:6,a:'Redação Lente',b:[['O que muda no processo','Geração de textos, imagens e variações de peças já faz parte da rotina de muitas equipes. O ganho é velocidade na exploração; o risco, a homogeneização, já que modelos tendem a reproduzir o que é mais comum.'],['O que continua humano','Entender o contexto, ter ponto de vista, assumir riscos criativos e responder pelas consequências éticas de uma peça. Isso segue sendo trabalho de gente.'],['Questões em aberto','Direitos autorais, transparência sobre uso de IA e impacto nas profissões criativas ainda estão em discussão. Quem trabalha com comunicação precisa acompanhar o debate, não só as ferramentas.']],r:['Acompanhe a discussão regulatória em fontes oficiais e na imprensa especializada em comunicação.']},
+{id:'primeiro-portfolio',c:'cf',t:'Primeiro portfólio: como mostrar pensamento, não só peças',s:'Quem contrata quer entender como você chega às ideias.',d:'2026-10-01',m:5,a:'Redação Lente',b:[['Menos trabalhos, mais contexto','Três projetos bem explicados valem mais que dez imagens soltas. Conte o problema, o público, as alternativas descartadas e o resultado, mesmo que o projeto seja acadêmico.'],['Projetos autorais contam','Sem cases reais ainda? Reimagine uma marca, crie uma campanha para uma causa ou refaça um briefing. O que se avalia é o raciocínio.'],['Apresentação importa','Organize de forma simples, com boa tipografia e navegação clara. O portfólio é, ele próprio, uma peça de comunicação sobre você.']],r:['Referências de portfólios de agências e profissionais da área, para estudo de estrutura.']},
+{id:'o-briefing',c:'pp',t:'Briefing: o documento que decide a campanha antes de ela existir',s:'Um briefing vago gera trabalho vago. Saber perguntar é metade da criação.',d:'2026-09-28',m:6,a:'Redação Lente',b:[['Mais que um formulário','O briefing reúne o problema, o público, o objetivo, as restrições e o contexto de mercado. Quando vira um checklist preenchido às pressas, a equipe criativa passa a trabalhar sobre suposições.'],['Perguntas que mudam tudo','Qual comportamento queremos mudar? O que as pessoas já pensam sobre a marca? O que não pode ser dito? Essas respostas costumam ser mais úteis do que qualquer lista de entregáveis.'],['Contrabriefing','Devolver o briefing com dúvidas, hipóteses e recortes não é desconfiança: é uma forma de alinhar expectativas. Agências e clientes que fazem isso discutem menos no fim do processo.']],r:['BARRETO, Roberto Menna. Criatividade em propaganda.','Material de cursos de planejamento publicitário e manuais de agências sobre estrutura de briefing.']},
+{id:'like-a-girl',c:'ac',t:'#LikeAGirl: como uma expressão comum virou campanha',s:'A Always pegou uma frase do dia a dia e perguntou o que ela faz com a autoestima.',d:'2026-09-24',m:6,a:'Redação Lente',b:[['O insight','A campanha da Always, de 2014, partiu de uma observação simples: a expressão “como uma menina” costuma ser usada como insulto. O filme convida participantes a mostrar o que seria correr ou lançar “como uma menina” e contrasta a reação de adultos e de meninas mais novas.'],['Por que funcionou','Há um insight claro, uma ação que qualquer pessoa entende em segundos e uma proposta que muda o sentido de uma frase conhecida. A mensagem cabe numa hashtag sem perder força.'],['Pontos de atenção','Como em outras campanhas de propósito, vale observar a coerência com o restante da comunicação da marca e se o discurso se mantém depois do filme. Boa análise considera repercussão e crítica.']],r:['Filme e materiais institucionais da campanha #LikeAGirl (Always), 2014.','Cobertura de imprensa especializada em publicidade sobre a campanha.']},
+{id:'branding-alem-do-logo',c:'cm',t:'Branding além do logotipo: a marca como experiência',s:'Identidade é o que a marca mostra; reputação é o que as pessoas concluem.',d:'2026-09-20',m:5,a:'Redação Lente',b:[['Marca não é só visual','Logotipo e paleta são a parte visível. A marca também está no atendimento, no preço, na embalagem, no tom das respostas e na forma como lida com problemas.'],['Consistência e flexibilidade','Marcas fortes mantêm um núcleo estável, com valores e voz, e adaptam a expressão a cada canal. Rigidez demais cansa; flexibilidade sem núcleo dilui a identidade.'],['Construção lenta','Branding é acúmulo. Cada ponto de contato reforça ou enfraquece a percepção, e uma crise mostra o quanto essa reputação foi construída com consistência.']],r:['AAKER, David. Construindo marcas fortes.','WHEELER, Alina. Design de identidade da marca.']},
+{id:'storytelling',c:'cd',t:'Storytelling: a estrutura por trás das histórias que prendem',s:'Contar bem é escolher o que mostrar, o que esconder e quando virar a cena.',d:'2026-09-16',m:6,a:'Redação Lente',b:[['Conflito primeiro','Histórias interessantes têm alguém que quer algo e encontra um obstáculo. Na publicidade, esse alguém costuma ser o consumidor, e a marca entra como parte da solução, não como protagonista.'],['Trinta segundos, uma ideia','O formato curto obriga a cortar. Um filme publicitário eficiente costuma ter uma única ideia clara, um momento de virada e um fechamento que o público consiga repetir.'],['Imagem e texto juntos','Direção de arte e redação contam a mesma história por caminhos diferentes. Quando se contradizem, o público fica com a dúvida; quando se completam, a memória fica.']],r:['McKEE, Robert. Story: substância, estrutura, estilo e os princípios da escrita de roteiro.','CAMPBELL, Joseph. O herói de mil faces.']},
+{id:'publicidade-infantil',c:'ps',t:'Publicidade e infância: onde fica o limite?',s:'Crianças compreendem a persuasão de forma diferente. Isso muda as responsabilidades.',d:'2026-09-12',m:7,a:'Redação Lente',b:[['O debate','Crianças tendem a ter mais dificuldade de reconhecer a intenção persuasiva de um anúncio. Por isso, o tema divide opiniões: parte defende restrições fortes, parte aposta em autorregulação e educação midiática.'],['Normas no Brasil','O Conar tem regras específicas sobre anúncios dirigidos a crianças, e o Conanda editou uma resolução que considera abusiva a publicidade dirigida ao público infantil com certos elementos de persuasão. Há discussão sobre a aplicação e o alcance dessas normas.'],['Para quem cria','Mesmo quando a lei permite, a pergunta ética permanece: este apelo respeita o momento de desenvolvimento de quem vai assistir? Pais, escolas e profissionais costumam responder de formas diferentes.']],r:['CONAR. Código Brasileiro de Autorregulamentação Publicitária, seção sobre crianças e jovens.','CONANDA. Resolução nº 163/2014.']},
+{id:'dados-e-privacidade',c:'ti',t:'Personalização e privacidade: o marketing depois dos cookies',s:'Anunciar com precisão e respeitar a privacidade não precisa ser um dilema.',d:'2026-09-08',m:6,a:'Redação Lente',b:[['O fim de um modelo','Durante anos, o rastreamento de navegação sustentou a publicidade digital. Mudanças em navegadores e leis de proteção de dados vêm pressionando esse modelo e empurrando marcas a repensar como conhecer o público.'],['LGPD no dia a dia','No Brasil, a Lei Geral de Proteção de Dados define regras para coletar e tratar dados pessoais, incluindo base legal e transparência. Isso afeta formulários, CRM, newsletters e campanhas segmentadas.'],['Dados próprios e confiança','Marcas que constroem relação direta, com consentimento claro e valor real em troca, tendem a depender menos de rastreamento externo. Privacidade bem tratada também é um argumento de marca.']],r:['BRASIL. Lei nº 13.709/2018 (LGPD).','ANPD. Guias orientativos sobre tratamento de dados pessoais.']},
+{id:'quem-faz-uma-campanha',c:'cf',t:'Quem faz uma campanha: as funções por trás da publicidade',s:'Atendimento, planejamento, criação, mídia, produção. Cada função enxerga uma parte do problema.',d:'2026-09-04',m:5,a:'Redação Lente',b:[['A cadeia de uma campanha','O atendimento conversa com o cliente e organiza a demanda; o planejamento estuda o público e propõe a estratégia; a criação desenvolve a ideia; a mídia decide onde e quando ela aparece; a produção a materializa.'],['Novas funções','Hoje também entram dados, performance, social media, design de conteúdo e UX. Muitas carreiras se cruzam, e profissionais que entendem mais de uma etapa costumam colaborar melhor.'],['Como escolher um caminho','Experimente de perto: estágios, projetos de faculdade, produção de conteúdo próprio. O que você gosta de fazer no dia a dia diz mais do que o nome do cargo.']],r:['Materiais de associações e entidades do setor, como a ABAP, sobre funções em agências.']}
+];
+const $=s=>document.querySelector(s),app=$('#app');
+const cat=c=>CATS[c][0];
+const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('pt-BR',{day:'numeric',month:'long',year:'numeric'});
+function cover(a){const k=CATS[a.c][1],n=A.indexOf(a)+1;let r='';for(let i=0;i<5;i++)r+=`<circle cx="${220+n*47%160}" cy="${150+n*31%90}" r="${30+i*32}" fill="none" stroke="#fff" stroke-opacity="${.5-i*.08}" stroke-width="${3+i}"/>`;
+return `<svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Capa ilustrada de ${a.t.replace(/"/g,'')}"><rect width="400" height="260" fill="${k}"/><rect x="0" y="150" width="400" height="110" fill="#2e1065" opacity=".35"/>${r}<circle cx="${220+n*47%160}" cy="${150+n*31%90}" r="14" fill="#fff"/></svg>`}
+const card=a=>`<article class="card" onclick="location.hash='a-${a.id}'" tabindex="0" onkeydown="if(event.key==='Enter')location.hash='a-${a.id}'"><div class="cv">${cover(a)}</div><span class="tag">${cat(a.c)}</span><h3>${a.t}</h3><p>${a.s}</p><span class="meta">${fmt(a.d)} • ${a.m} min de leitura</span></article>`;
+let filt='',query='';
+function list(){const q=query.toLowerCase();return A.filter(a=>(!filt||a.c===filt)&&(!q||(a.t+a.s+cat(a.c)+a.b.map(x=>x.join(' ')).join(' ')).toLowerCase().includes(q)))}
+function chips(){return `<div class="chips"><button class="chip ${filt?'':'on'}" onclick="setF('')">Todas</button>${Object.keys(CATS).map(c=>`<button class="chip ${filt===c?'on':''}" onclick="setF('${c}')">${cat(c)}</button>`).join('')}</div>`}
+function setF(c){filt=c;location.hash==='#artigos'?render():location.hash='artigos'}
+function news(){return `<section class="nl" id="news"><h2>Receba a Lente na sua caixa de entrada</h2><p class="meta" style="font-size:16px">Um e-mail por semana com os melhores artigos e referências.</p><div class="f" id="nlf"><input id="em" type="email" placeholder="seu@email.com" aria-label="E-mail"><button class="btn" onclick="sub()">Quero receber</button></div></section>`}
+function sub(){const v=$('#em').value;$('#nlf').innerHTML=/\S+@\S+\.\S+/.test(v)?'<b>Inscrição recebida. Obrigada por ler com a gente.</b>':'<b>Digite um e-mail válido para continuar.</b>'}
+function home(){const f=A[0],rest=A.slice(1);return `<div class="w"><div class="hero"><div class="cv" onclick="location.hash='a-${f.id}'">${cover(f)}</div><div><span class="tag">${cat(f.c)}</span><h1>${f.t}</h1><p>${f.s}</p><p class="meta">${fmt(f.d)} • ${f.m} min de leitura</p><a class="btn" href="#a-${f.id}">Ler artigo</a></div></div>
+<section><div class="sh"><h2>Publicações recentes</h2><a class="btn o" href="#artigos">Ver todas</a></div><div class="grid">${rest.slice(0,3).map(card).join('')}</div></section>
+<section><div class="dest"><div class="sh"><h2>Artigos em destaque</h2></div><div class="grid">${[A[1],A[4],A[5]].map(card).join('')}</div></div></section>
+<section><div class="sh"><h2>Categorias</h2></div><div class="cats">${Object.keys(CATS).map(c=>`<div class="cat" style="--c:${CATS[c][1]}" tabindex="0" onclick="setF('${c}')" onkeydown="if(event.key==='Enter')setF('${c}')"><b>${cat(c)}</b><span>${CATS[c][2]}</span></div>`).join('')}</div></section>
+<section><div class="sh"><h2>Recomendações de leitura</h2></div><div class="rec">${[A[0],A[3],A[6],A[2]].map((a,i)=>`<div onclick="location.hash='a-${a.id}'"><span class="serif">${i+1}</span><div style="display:block"><b class="serif" style="font-size:19px">${a.t}</b><br><span class="meta">${cat(a.c)}</span></div></div>`).join('')}</div></section>
+<section><div class="sh"><h2>Vá além da leitura</h2></div><div class="cats">${[['quiz','Quiz: que publicitário você é?','Cinco perguntas para descobrir qual área combina com você.'],['glossario','Glossário de A a Z','Os termos da publicidade explicados sem complicação.'],['linha','Linha do tempo','Marcos da publicidade, dos primeiros anúncios à era da IA.'],['lista','Minha lista de leitura','Salve artigos para ler depois, direto no seu navegador.']].map(x=>`<div class="cat" style="--c:var(--p2)" tabindex="0" onclick="location.hash='${x[0]}'" onkeydown="if(event.key==='Enter')location.hash='${x[0]}'"><b>${x[1]}</b><span>${x[2]}</span></div>`).join('')}</div></section>
+<section>${aboutBox()}</section>${news()}</div>`}
+function aboutBox(){return `<div class="about"><div><h2>Olhar para a publicidade além do óbvio</h2><p>A Lente Publicitária é um espaço independente de informação, reflexão e aprendizado sobre publicidade, comunicação e marketing.</p><p>Não queremos só repetir notícias. Queremos analisar campanhas, apresentar referências e conectar a publicidade a cultura, tecnologia e sociedade, para estudantes e profissionais.</p><a class="btn" href="#artigos">Explorar artigos</a></div><div class="cv" style="border-radius:18px;overflow:hidden">${cover(A[3])}</div></div>`}
+function arts(){const l=list();return `<div class="w" style="padding-top:36px"><h1 class="serif" style="font-size:40px">Artigos</h1>${chips()}${query?`<p class="meta">Resultados para “${query.replace(/</g,'')}”: ${l.length}</p>`:''}${l.length?`<div class="grid">${l.map(card).join('')}</div>`:'<p class="empty">Nenhum artigo encontrado. Tente outro termo ou limpe o filtro de categoria.</p>'}<div style="height:40px"></div></div>`}
+function art(id){const i=A.findIndex(a=>a.id===id);if(i<0)return arts();const a=A[i],rel=A.filter(x=>x.c!==a.c).slice(0,3),p=A[i-1],n=A[i+1];
+return `<article class="art"><span class="tag">${cat(a.c)}</span><h1>${a.t}</h1><p class="sub">${a.s}</p><p class="meta">Por ${a.a} • ${fmt(a.d)} • ${a.m} min de leitura</p><p class="sv"><button class="btn o" id="sv" onclick="tog('${a.id}')">${inL(a.id)?'✓ Salvo na sua lista':'Salvar para ler depois'}</button></p><div class="cv">${cover(a)}</div>
+${a.b.map((x,j)=>`<h2>${x[0]}</h2>${x.slice(1).map(t=>`<p>${t}</p>`).join('')}${j===0?`<blockquote>${a.s}</blockquote>`:''}`).join('')}
+<div class="share"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(a.t+' '+location.href)}">Compartilhar no WhatsApp</a></div>
+<div class="refs"><b>Referências e fontes</b><ul>${a.r.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+<div class="pn"><a ${p?`href="#a-${p.id}"`:''}>${p?'← '+p.t:''}</a><a style="text-align:right" ${n?`href="#a-${n.id}"`:''}>${n?n.t+' →':''}</a></div></article>
+<div class="w"><section><div class="sh"><h2>Artigos relacionados</h2></div><div class="grid">${rel.map(card).join('')}</div></section>${news()}</div>`}
+const QZ=[
+['Alguém pede ajuda com um projeto. Você começa por…',['Rabiscar ideias e referências visuais','cr'],['Entender quem é o público e qual é o problema','pl'],['Ver onde e quando a mensagem vai aparecer','mi'],['Alinhar prazos, pessoas e expectativas','at']],
+['Seu tipo de conteúdo favorito para consumir:',['Filmes e peças que me surpreendem','cr'],['Documentários e pesquisas sobre comportamento','pl'],['Gráficos, rankings e tendências','mi'],['Conversas e entrevistas com gente interessante','at']],
+['Num trabalho em grupo, você costuma ser quem…',['Tem a ideia maluca que ninguém pensou','cr'],['Pergunta “por que estamos fazendo isso?”','pl'],['Organiza os números e testa o que funciona','mi'],['Garante que todo mundo se entenda e entregue','at']],
+['Uma campanha deu certo. O que mais te orgulha?',['A ideia ser genial','cr'],['O insight ter sido certeiro','pl'],['Os resultados baterem a meta','mi'],['O cliente ter saído feliz e confiante','at']],
+['Escolha uma ferramenta:',['Caderno de rascunhos','cr'],['Mapa de pesquisa e persona','pl'],['Planilha ou painel de métricas','mi'],['Agenda e quadro de tarefas','at']]];
+const P={cr:['Criação','Você pensa em imagens e ideias. Direção de arte e redação combinam com seu jeito de ver o mundo.','direcao-de-arte'],pl:['Planejamento','Você quer entender o porquê antes do como. Pesquisa e estratégia são o seu terreno.','alem-do-slogan'],mi:['Mídia e dados','Você gosta de provar o que funciona. Mídia, performance e análise de dados têm tudo a ver com você.','dados-e-privacidade'],at:['Atendimento e gestão','Você conecta pessoas e prazos. Atendimento, produção e gestão de projetos podem ser o seu lugar.','quem-faz-uma-campanha']};
+let Qi=0,S={};
+function qr(){Qi=0;S={cr:0,pl:0,mi:0,at:0};qz()}
+function qa(k){S[k]++;Qi++;qz()}
+function qz(){const el=$('#qz');if(!el)return;if(Qi<QZ.length){const q=QZ[Qi];el.innerHTML=`<div class="pg"><i style="width:${Qi/QZ.length*100}%"></i></div><h2 class="serif" style="font-size:24px;margin-bottom:16px">${q[0]}</h2>${q.slice(1).map(o=>`<button class="opt" onclick="qa('${o[1]}')">${o[0]}</button>`).join('')}`}else{const k=Object.keys(S).sort((a,b)=>S[b]-S[a])[0],p=P[k];el.innerHTML=`<div class="pg"><i style="width:100%"></i></div><span class="tag">Seu resultado</span><h2 class="serif" style="font-size:34px;margin:12px 0">${p[0]}</h2><p style="font-size:18px">${p[1]}</p><p><a class="btn" href="#a-${p[2]}">Ler um artigo sobre isso</a> <button class="btn o" onclick="qr()">Refazer</button></p>`}}
+function quizPg(){setTimeout(qr);return `<div class="pgw"><h1 class="serif" style="font-size:38px">Que tipo de publicitário você é?</h1><p class="meta" style="font-size:16px">Cinco perguntas, sem resposta certa. É só um jeito divertido de explorar as áreas da publicidade.</p><div id="qz"></div></div>`}
+const G=[['Briefing','Documento com as informações e os objetivos de um trabalho, que orienta toda a equipe.'],['Branding','Conjunto de ações para construir e gerenciar a percepção de uma marca.'],['Call to action (CTA)','Chamada que convida o público a fazer algo, como “compre agora” ou “inscreva-se”.'],['Copy','Texto publicitário, escrito para comunicar e persuadir.'],['Insight','Percepção sobre o público que revela algo útil e inesperado e inspira a ideia da campanha.'],['Key visual','Imagem principal de uma campanha, que define o estilo visual das demais peças.'],['Layout','Organização dos elementos visuais e textuais de uma peça.'],['Mídia','Canais e espaços usados para veicular uma mensagem, como TV, redes sociais e outdoors.'],['Naming','Processo de criação do nome de uma marca, produto ou serviço.'],['Persona','Perfil fictício, construído a partir de dados, que representa um tipo de público.'],['Posicionamento','Lugar que a marca busca ocupar na mente do público em relação às concorrentes.'],['Público-alvo','Grupo de pessoas que a comunicação pretende atingir.'],['Slogan','Frase curta e memorável que resume a ideia ou a promessa da marca.'],['Storyboard','Sequência de desenhos que mostra, cena a cena, como será um filme ou animação.'],['Tom de voz','Jeito de falar da marca: vocabulário, humor e nível de formalidade.'],['Touchpoint','Qualquer ponto de contato entre a pessoa e a marca, do anúncio ao atendimento.']];
+function gl(){const el=$('#gl');if(!el)return;const q=($('#gq').value||'').toLowerCase(),l=G.filter(x=>(x[0]+x[1]).toLowerCase().includes(q)).sort((a,b)=>a[0].localeCompare(b[0],'pt'));let L='';el.innerHTML=l.length?l.map(x=>{const h=x[0][0].toUpperCase(),o=(h!==L?`<h2 class="serif">${h}</h2>`:'')+`<b class="t">${x[0]}</b><p>${x[1]}</p>`;L=h;return o}).join(''):'<p class="empty">Nenhum termo encontrado. Tente outra palavra.</p>'}
+function glosPg(){setTimeout(gl);return `<div class="pgw"><h1 class="serif" style="font-size:38px">Glossário de A a Z</h1><p class="meta" style="font-size:16px">Os termos que você vai ouvir na faculdade e nas agências, explicados de forma simples.</p><input id="gq" class="gi" type="search" placeholder="Buscar um termo" aria-label="Buscar um termo" oninput="gl()"><div class="gl" id="gl"></div></div>`}
+const T=[
+['1808','Os primeiros anúncios no Brasil','A Gazeta do Rio de Janeiro, primeiro jornal impresso do país, já traz anúncios nas suas edições.'],
+['1836','Anúncio paga o jornal','O jornal francês La Presse passa a vender espaço publicitário, modelo que ajuda a financiar a imprensa de massa.'],
+['1841','Nasce a agência','Volney Palmer abre, nos Estados Unidos, o que costuma ser apontado como a primeira agência de publicidade.'],
+['1914','Primeira agência brasileira','A Eclética, em São Paulo, é frequentemente citada como a primeira agência de propaganda do Brasil.'],
+['1930','O rádio entra em cena','No Brasil, jingles e programas patrocinados ganham espaço e levam a publicidade para dentro das casas.'],
+['1941','O primeiro comercial de TV','Nos Estados Unidos, uma marca de relógios exibe o primeiro anúncio de TV comercial, de apenas 10 segundos.'],
+['1950','A TV chega ao Brasil','Com a TV Tupi, a publicidade brasileira ganha imagem e movimento, e os comerciais são feitos ao vivo.'],
+['1959','A revolução criativa','Agências como a DDB, com campanhas para a Volkswagen, valorizam ideia, humor e honestidade, e mudam o jeito de anunciar.'],
+['1980','O Conar é criado','Nasce o Conselho Nacional de Autorregulamentação Publicitária, para zelar pela ética nos anúncios brasileiros.','representatividade'],
+['1994','O primeiro banner na web','O site HotWired exibe um banner que costuma ser citado como o primeiro anúncio de internet.'],
+['2000','Publicidade por busca','O Google lança o AdWords, e anunciar passa a depender do que as pessoas procuram naquele momento.'],
+['2005','Redes sociais e vídeo online','Com o YouTube e as redes sociais, as marcas passam a conversar com o público, e não só a falar com ele.','marca-nas-redes'],
+['2018','Privacidade vira regra','É sancionada a Lei Geral de Proteção de Dados, que muda como as marcas coletam e usam informações.','dados-e-privacidade'],
+['2022','A IA entra na criação','Ferramentas de IA generativa chegam ao dia a dia de criação e abrem debates sobre autoria, ética e profissão.','ia-na-criacao']];
+function linhaPg(){return `<div class="pgw"><h1 class="serif" style="font-size:38px">Linha do tempo da publicidade</h1><p class="meta" style="font-size:16px">Alguns marcos que ajudam a entender como chegamos até aqui.</p><div class="tl">${T.map(x=>`<div><span class="y">${x[0]}</span><h3>${x[1]}</h3><p>${x[2]}</p>${x[3]?`<a href="#a-${x[3]}">Ler o artigo relacionado</a>`:''}</div>`).join('')}</div></div>`}
+let LST=[];try{LST=JSON.parse(localStorage.getItem('lente-lista')||'[]')}catch(e){}
+function inL(id){return LST.includes(id)}
+function tog(id){LST=inL(id)?LST.filter(x=>x!==id):[...LST,id];try{localStorage.setItem('lente-lista',JSON.stringify(LST))}catch(e){}const b=$('#sv');if(b)b.textContent=inL(id)?'✓ Salvo na sua lista':'Salvar para ler depois'}
+function listaPg(){const l=LST.map(id=>A.find(a=>a.id===id)).filter(Boolean);return `<div class="w" style="padding-top:36px"><h1 class="serif" style="font-size:38px">Minha lista de leitura</h1><p class="meta" style="font-size:16px">Os artigos que você salvou para ler depois. A lista fica guardada neste navegador.</p>${l.length?`<div class="grid" style="margin-top:28px">${l.map(a=>`<div>${card(a)}<button class="btn o rm" onclick="tog('${a.id}');render()">Remover da lista</button></div>`).join('')}</div>`:`<p class="empty">Sua lista está vazia. Abra um artigo e toque em “Salvar para ler depois”.</p>`}<div style="height:40px"></div></div>`}
+function render(){const h=location.hash.slice(1)||'home';document.querySelectorAll('nav a.h').forEach(e=>e.classList.toggle('on',e.id==='n-'+h));
+app.innerHTML=h.startsWith('a-')?art(h.slice(2)):h==='artigos'?arts():h==='quiz'?quizPg():h==='glossario'?glosPg():h==='linha'?linhaPg():h==='lista'?listaPg():h==='sobre'?`<div class="w" style="padding:40px 20px">${aboutBox()}</div>`:home();
+if(h==='news')document.getElementById('news')?.scrollIntoView();else if(!h.startsWith('news'))scrollTo(0,0);document.title=(h.startsWith('a-')&&A.find(x=>'a-'+x.id===h)?A.find(x=>'a-'+x.id===h).t+' | ':'')+'Lente Publicitária'}
+$('#q').addEventListener('input',e=>{query=e.target.value.trim();if(location.hash!=='#artigos'){history.replaceState(null,'','#artigos');}render();$('#q').focus()});
+addEventListener('hashchange',render);render();
+</script>
+</body>
+</html>
